@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>TIMER</title>
+</head>
+<body>
+<center>
+<h1>TIMER</h1>
+</center>
+</body>
+<div>
+	<center>
+		<h1>
+			</br>
+			<span id="timer">05:60:60</span>
+			</br>
+			<span>hr:ms:ss<span>
+	
+		</h1>
+	</center>
+</div>
+    
+<script>
+	window.onload =  function() {
+        var hr = 05;
+        var hou = 60;
+        var sec = 60;
+       setInterval( function()
+	 {
+      		 document.getElementById("timer").innerHTML = hr + ":" + hou +":" + sec ;
+     		  sec--;
+    		   if(sec == 00) 
+			{
+               			 hou--;
+        			 sec = 60;
+     		  if (hou == 00)
+      			  {                   
+               			  hr--;
+            			  hou = 60;                 
+      			   }
+      		  if(hr == 00)
+       			   {
+        			 hr = 05;
+     			   }
+        }
+     },100);
+   }
+</script>
+</html>

@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="smile.css">
 	<link rel="stylesheet" href="ball.css">
 	<link rel="stylesheet" href="fly.css">
+		<link rel="stylesheet" href="font1.css">
+		<link rel="stylesheet" href="button.css">
 	</head>
 		
 		
@@ -19,7 +21,7 @@
 		
 
 
-	
+	<div class="scale">
 <body background="1.jpg">
 
 
@@ -83,9 +85,22 @@
 						Seconds: <input type="text" id="scs" name="scs" value="0" size="2" maxlength="2" /><br/>
 						</font>
 						</br>
-						<input type="button" id="btnct" value="START" onclick="countdownTimer()"/>
-						<input type="button"  value="STOP" onclick="stopCount()"/>
 						
+						
+						<button id="btnct" value="START" onclick="countdownTimer()"> START</button>
+
+			&nbsp; &nbsp;&nbsp; &nbsp;  <input type="button" id="btnct" value="START" onclick="countdownTimer()"/>&nbsp; &nbsp; 
+						<input type="button"  value="STOP" onclick="stopCount()"/>
+											&nbsp; &nbsp;<button id="reset">RESET</button>
+						
+						
+						
+						
+						
+						
+						
+						<input type="button"  value="STOP" onclick="stopCount()"/>
+						&nbsp; &nbsp; <button id="reset">RESET</button>
 					</form>
 				</div>
 				
@@ -147,7 +162,7 @@
 			</div>
 		</div>	</br>
 
-
+</div>
 	
 <script>
 
@@ -190,6 +205,8 @@ var ctsecs = time % 60;
 			ctmnts = (ctmnts < 10) ? '0'+ctmnts: ctmnts;
 			cthrs = (cthrs < 10) ? '0'+cthrs : cthrs;
 		//var timerId;
+		var timer = new countdownTimer();
+        timer.init();
     var t; 
 var myVar;
 var timer_is_on = 0;
@@ -228,18 +245,18 @@ var timer_is_on = 0;
 		       	ctmnts--;
 			   	ctsecs = 59;
 								
-				if(ctmnts <0)
+				if(ctmnts < 0)
 					{	cthrs--;					
 						ctmnts = 59;
 						//ctmnts=59;	
 						//ctmnts=59;	
 						ctmnts = ctmnts < 10 ? "0" + ctmnts : ctmnts;
 					}							
-					 if(cthrs > 0)
+					 if(cthrs >= 0)
 					{
 							
 							//ctmnts--;
-						ctescs = 59;
+						ctsecs = 59;
 					    //ctmnts =59;
 							//cthrs--;			
 				    }
@@ -248,7 +265,7 @@ var timer_is_on = 0;
 				{
 					ctsecs = 0;
 					ctmnts = 0;
-					cthrs =0;
+					cthrs = 0;
 				}
 			}	
 		
@@ -267,12 +284,10 @@ var timer_is_on = 0;
 }
 
 
-function reset()
-{
-clearInterval(t);
-						
-}
-	 
+ $("#reset").click(function(){
+        //timer = new Countdown();  
+        timer.reset();
+        });
 	 	
 	
 		

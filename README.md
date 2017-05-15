@@ -7,4 +7,4 @@ Two versions
 ============
 
 1. Fancy Timer - animation and more.
-2. Simple Timer - plain old simple timer.
+2. Simple Timer - plain old simple timer.# timer

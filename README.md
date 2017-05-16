@@ -14,4 +14,4 @@ Two versions
 
 License and copyright
 ====================
-Licensed under the [MIT License](LICENSE)
+Licensed under the [MIT License](LICENSE.txt)

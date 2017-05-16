@@ -8,3 +8,10 @@ Two versions
 
 1. Fancy Timer - animation and more.
 2. Simple Timer - plain old simple timer.# timer
+
+
+
+
+License and copyright
+====================
+Licensed under the [MIT License](LICENSE)
